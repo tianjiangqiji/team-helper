@@ -27,7 +27,9 @@
 ### 管理后台
 ![激活码管理](image/激活码管理.png)
 ![库存管理](image/库存管理.png)
+此处的一件粘贴使用'tools/Team管理系统配套的脚本.js'获取母号Token（油猴或脚本猫安装）
 ![添加母号](image/添加母号.png)
+![脚本](image/脚本.png)
 ![系统设置](image/系统设置.png)
 ![系统日志](image/系统日志.png)
 
