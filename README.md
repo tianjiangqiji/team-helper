@@ -36,8 +36,9 @@
 ### 1. 克隆仓库
 
 ```bash
-git clone <repository-url>
-cd <project-directory>
+git clone https://github.com/tianjiangqiji/team-helper.git
+```
+cd team-helper
 ```
 
 ### 2. 安装依赖
@@ -57,10 +58,10 @@ cp .env.example .env
 **⚠️ 重要：首次部署必须修改以下配置**
 
 ```bash
-# 设置管理员密码（建议显式配置；留空时程序会在首次启动时生成临时密码）
+# 设置管理员密码（首次进入后后会存入数据库，此处就可以删除了）
 ADMIN_PASSWORD=your-secure-password
 
-# 设置 Flask 密钥（建议显式配置；留空时进程会生成临时密钥）
+# 设置 Flask 随机加密密钥
 SECRET_KEY=your-random-secret-key
 
 # 配置Redis
@@ -68,7 +69,7 @@ REDIS_HOST=127.0.0.1
 REDIS_PORT=6379
 REDIS_PASSWORD=your-redis-password  # 如果有密码
 
-# 配置易支付（如需支付功能）
+# 配置易支付（可选，部署后在管理后台配置支付方式也可以，如果填入首次进入后后会存入数据库，此处就可以删除了）
 EPAY_MERCHANT_ID=your-merchant-id
 EPAY_API_KEY=your-api-key
 EPAY_NOTIFY_URL=https://your-domain.com/api/pay/notify
@@ -207,7 +208,6 @@ MAX_CONCURRENT_INVITES=3
 3. 🌐 生产环境建议使用HTTPS
 4. 🔐 定期备份数据库
 5. 📝 定期检查日志文件
-6. 🚫 不要将.env文件提交到版本控制
 
 ## 许可证
 
